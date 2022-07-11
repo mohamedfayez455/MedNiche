@@ -2957,6 +2957,13 @@ ul {
   border-radius: 5px;
   padding: 0 130px 0 20px;
 }
+.single-subscribe-inner select {
+  width: 100%;
+  border: 1px solid #DFDFDF;
+  height: 65px;
+  border-radius: 5px;
+  padding: 0 130px 0 20px;
+}
 .single-subscribe-inner .btn {
   position: absolute;
   right: 6px;
