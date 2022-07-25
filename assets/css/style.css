@@ -2616,7 +2616,7 @@ ul {
   filter: brightness(1);
 }
 .service .single-intro-inner {
-  height: 360px;
+  height: 280px;
 }
 
 .intro-slider .owl-nav {
@@ -2717,9 +2717,9 @@ ul {
   top: 0;
   width: 50%;
   height: 100%;
-  background-image: url("../img/about/3.png");
+  /* background-image: url("../img/about/3.png");
   background-size: cover !important;
-  background-position: center;
+  background-position: center; */
 }
 
 /************** single-team ***************/
