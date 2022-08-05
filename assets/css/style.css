@@ -865,7 +865,7 @@ ul {
     padding: 245px 0 112px;
     position: relative;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center;
 }
 
 .breadcrumb-area:after {
@@ -2728,7 +2728,7 @@ ul {
 .banner-area {
     position: relative;
     background-size: cover !important;
-    background-position: center;
+    /* background-position: center; */
 }
 
 .banner-area .banner-bg {
