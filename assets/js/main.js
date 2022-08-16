@@ -69,23 +69,24 @@
             ---------------------------------------------------- */
         var $Container = $(".isotop-filter-area");
         if ($Container.length > 0) {
-            $(".property-filter-area").imagesLoaded(function() {
-                var festivarMasonry = $Container.isotope({
-                    itemSelector: ".project-filter-item", // use a separate class for itemSelector, other than .col-
-                    masonry: {
-                        gutter: 0,
-                    },
-                });
-                $(document).on("click", ".isotop-filter-menu > button", function() {
-                    var filterValue = $(this).attr("data-filter");
-                    festivarMasonry.isotope({
-                        filter: filterValue,
-                    });
+
+            var festivarMasonry = $Container.isotope({
+                itemSelector: ".project-filter-item", // use a separate class for itemSelector, other than .col-
+                masonry: {
+                    gutter: 0,
+                },
+            });
+
+            $('.isotop-filter-menu > a').click(function() {
+                var filterValue = $(this).attr("data-filter");
+                festivarMasonry.isotope({
+                    filter: filterValue,
                 });
             });
-            $(document).on("click", ".isotop-filter-menu > button", function() {
-                $(this).siblings().removeClass("active");
-                $(this).addClass("active");
+
+            $('.isotop-filter-menu > a').click(function() {
+                $(this).siblings().removeClass("current");
+                $(this).addClass("current");
             });
         }
 
@@ -317,7 +318,26 @@
 
 
     try {
-        $("#steps-form").steps({
+        let stepsForm = $("#steps-form");
+        stepsForm.validate({
+            errorPlacement: function errorPlacement(error, element) { null },
+            rules: {
+                'interests[]': {
+                    required: true
+                },
+                'help_for[]': {
+                    required: true
+                },
+                'monthly_salary[]': {
+                    required: true
+                },
+                'number_physicians[]': {
+                    required: true
+                }
+            },
+            debug: true
+        })
+        stepsForm.steps({
             headerTag: "h3",
             bodyTag: "section",
             transitionEffect: "slideLeft",
@@ -326,11 +346,27 @@
                 next: "Start My Free Assessment",
                 finish: "Send My Free Assessment",
             },
+            onStepChanging: function(event, currentIndex, newIndex) {
+
+                stepsForm.validate().settings.ignore = ":disabled,.service-area:not('.current') input";
+
+                let isValid = stepsForm.valid()
+                if (isValid) {
+                    if (newIndex > 0) {
+                        $('#steps-form .actions ul li>a[href="#next"]').text("next");
+                    } else {
+                        $('#steps-form .actions ul li>a[href="#next"]').text("Start My Free Assessment");
+                    }
+                }
+                return isValid;
+            },
+            onFinishing: function(event, currentIndex) {
+                stepsForm.validate().settings.ignore = ":disabled";
+                return stepsForm.valid();
+            },
         });
 
-        $('#steps-form .actions ul li>a[href="#next"]').click(function(e) {
-            $(this).text("next");
-        })
+        $('#steps-form .actions ul li>a[href="#next"]').click(function(e) {})
     } catch (e) {
 
     }
