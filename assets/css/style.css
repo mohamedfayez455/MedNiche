@@ -4728,6 +4728,7 @@ ul {
 
 .form-check-holder label.single-intro-inner {
     display: block !important;
+    cursor: pointer;
 }
 
 
