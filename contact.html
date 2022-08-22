@@ -10,6 +10,7 @@
     <link rel=icon href="assets/img/Logo (2).png" sizes="20x20" type="image/png">
 
     <!-- Stylesheet -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -59,9 +60,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="nav-right-part nav-right-part-desktop">
-                    <a class="search-bar-btn" href="#"><i class="fa fa-search"></i></a>
-                </div> -->
             </div>
         </nav>
     </div>
@@ -85,7 +83,7 @@
 
     <!-- contact form area start -->
     <div class="contact-form-area pd-top-120 pd-bottom-120">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-7 mb-4 mb-lg-0">
                     <div class="contact-form-inner">
@@ -96,23 +94,23 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="single-input-inner">
-                                        <input type="text" placeholder="Name">
+                                        <input type="text" placeholder="Name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="single-input-inner">
-                                        <input type="text" placeholder="Email">
+                                        <input type="text" placeholder="Email" required>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="single-input-inner">
-                                        <input type="text" placeholder="Subject">
+                                        <input type="text" placeholder="Subject" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="single-input-inner">
-                                        <textarea placeholder="Message"></textarea>
+                                        <textarea placeholder="Message" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -135,15 +133,6 @@
                             <div class="media-body details">
                                 <h4>Mail Drop Us</h4>
                                 <p>hello@medniche.info</p>
-                            </div>
-                        </div>
-                        <div class="media single-contact-info">
-                            <div class="media-left thumb">
-                                <img src="assets/img/icon/15.png" alt="img">
-                            </div>
-                            <div class="media-body details">
-                                <h4>Location</h4>
-                                <p>Egypt</p>
                             </div>
                         </div>
                         <ul class="social-media mt-4 pt-2">
@@ -186,16 +175,17 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="single-input-inner">
-                                        <input type="text" placeholder="Enter Your E-mail">
+                                        <input type="text" placeholder="Enter Your E-mail" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="single-select-inner">
+                                    <div class="single-select-inner" style="color: #000;">
                                         <select class="single-select">
                                             <option>Select Category</option>
-                                            <option>Baby Wishes</option>
-                                            <option>Back to School</option>
-                                            <option>Birthday</option>
+                                            <option>Travel Health & Medical Tourism</option>
+                                            <option>Beauty</option>
+                                            <option>Control & Prevent Infections</option>
+                                            <option>Health</option>
                                         </select>
                                     </div>
                                 </div>
@@ -241,6 +231,7 @@
 
 
     <!-- all plugins here -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/vendor.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
