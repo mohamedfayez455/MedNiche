@@ -325,6 +325,7 @@
     stepsForm.validate({
       errorPlacement: function errorPlacement(error, element) {
         null;
+        // element.before(error); 
       },
       rules: {
         "interests[]": {
@@ -340,6 +341,30 @@
           required: true,
         },
       },
+      errorPlacement: function (error, element) {
+        console.log('dd', element.attr("name"))
+        alert("Please, choose an option");
+        if (element.attr("name") == "number_physicians[]") {
+            // error.appendTo("#messageBox");
+        } else {
+            error.insertAfter(element)
+        }
+    },
+    // messages: {
+    //   "interests[]": {
+    //         required: "The Client name is a required / mandatory field"
+    //     },
+    //     "help_for[]": {
+    //         required: "The Client address is a required / mandatory field"
+    //     },
+    //     "monthly_salary[]": {
+    //         required: "The City is a required / mandatory field"
+    //     },
+    //     "number_physicians[]": {
+    //       required: "The City is a required / mandatory field"
+    //   },
+
+    // },
       debug: true,
     });
     stepsForm.steps({
@@ -367,7 +392,10 @@
         }
         return isValid;
       },
+      
       onFinishing: function (event, currentIndex) {
+        // alert("Please, choose an option");
+
         stepsForm.validate().settings.ignore = ":disabled";
         return stepsForm.valid();
       },
@@ -430,16 +458,47 @@
         window.location.hash = target;
       });
   });
+  ////////////////////////////
+  $(function() {
+    $('.animate-rotate-1').animatedHeadline({
+        animationType: 'rotate-1'
+    });
 
-  // Modal Gift
-  // $('#myModal').modalSteps({
-  //   btnCancelHtml: "Cancel",
-  //   btnPreviousHtml: "Previous",
-  //   btnNextHtml: "Next",
-  //   btnLastStepHtml: "Complete",
-  //   disableNextButton: false,
-  //   completeCallback: function() {},
-  //   callbacks: {},
-  //   getTitleAndStep: function() {}
-  // });
+    $('.animate-type').animatedHeadline({
+        animationType: 'type'
+    });
+
+    $('.animate-rotate-2').animatedHeadline({
+        animationType: 'rotate-2'
+    });
+
+    $('.animate-loading-bar').animatedHeadline({
+        animationType: 'loading-bar'
+    });
+
+    $('.animate-slide').animatedHeadline({
+        animationType: 'slide'
+    });
+
+    $('.animate-clip').animatedHeadline({
+        animationType: 'clip'
+    });
+
+    $('.animate-zoom').animatedHeadline({
+        animationType: 'zoom'
+    });
+
+    $('.animate-rotate-3').animatedHeadline({
+        animationType: 'rotate-3'
+    });
+
+    $('.animate-scale').animatedHeadline({
+        animationType: 'scale'
+    });
+
+    $('.animate-push').animatedHeadline({
+        animationType: 'push'
+    });
+});
+
 })(jQuery);

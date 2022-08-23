@@ -52,8 +52,8 @@ Version: 1.0.0
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,400i,500,600,700i&amp;display=swap");
 :root {
     --main-color: #07CCEC;
-    --main-color-2: #4285F4;
-    --heading-color: #01316C;
+    --main-color-2: #0A0666;
+    --heading-color: #0A0666;
     --paragraph-color: #566D89;
     --body-font: "Work Sans", sans-serif;
     --body-font-size: 16px;
@@ -337,7 +337,7 @@ code {
     clip: auto !important;
     -webkit-clip-path: none;
     clip-path: none;
-    color: #21759b;
+    color: #0A0666;
     display: block;
     font-size: 15px;
     font-size: 0.875rem;
@@ -600,7 +600,7 @@ ul {
 }
 
 .btn:hover {
-    background: #4285F4;
+    background: #0A0666;
 }
 
 .btn:hover:after {
@@ -1232,7 +1232,7 @@ ul {
     position: relative;
     display: inline-block;
     margin-bottom: 15px;
-    color: #08d914;
+    color: #06664F;
 }
 
 .section-title .sub-title.left-line {
@@ -1244,7 +1244,7 @@ ul {
     content: "";
     left: 0;
     top: -4px;
-    background: #08d914;
+    background: #06664F;
     height: 30px;
     width: 2px;
 }
