@@ -389,7 +389,20 @@
     } catch (e) {}
   };
   clAOS();
-
+  // Modal Loader
+  $(document).ready(function () {
+    $("#myModal").modal("show");
+  });
+  ////////////////////////////////////////////
+  // Input Modal File
+  $(document).ready(function () {
+    $('#choose-file').change(function () {
+      var i = $(this).prev('label').clone();
+      var file = $('#choose-file')[0].files[0].name;
+      $(this).prev('label').text(file);
+    }); 
+   });
+   ////////////////////////////////////
   $(".smoothscroll").on("click", function (e) {
     var cfg = { scrollDuration: 800 };
     var target = this.hash,
@@ -417,4 +430,16 @@
         window.location.hash = target;
       });
   });
+
+  // Modal Gift
+  // $('#myModal').modalSteps({
+  //   btnCancelHtml: "Cancel",
+  //   btnPreviousHtml: "Previous",
+  //   btnNextHtml: "Next",
+  //   btnLastStepHtml: "Complete",
+  //   disableNextButton: false,
+  //   completeCallback: function() {},
+  //   callbacks: {},
+  //   getTitleAndStep: function() {}
+  // });
 })(jQuery);
