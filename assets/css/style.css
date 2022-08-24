@@ -728,6 +728,7 @@ ul {
     ## Preloader Css
 -------------------------------------------*/
 
+
 /* .pre-wrap {
     position: fixed;
     content: "";
@@ -818,9 +819,11 @@ ul {
         -webkit-transform: scale(1);
     }
 } */
+
 .modal-body form input::placeholder {
     color: #000;
 }
+
 
 /*-----------------------------------------
     ## video 
@@ -4779,13 +4782,21 @@ ul {
     padding: 0.08em 0.8em;
     cursor: pointer;
 }
-.custom-file-upload{
-    background: #f7f7f7; 
+
+.custom-file-upload {
+    background: #f7f7f7;
     padding: 8px;
-    border: 1px solid #e3e3e3; 
-    border-radius: 5px; 
-    border: 1px solid #ccc; 
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
-  }
+}
+
+#steps-form label.error {
+    display: block;
+    text-align: center;
+    color: #c90000;
+    font-weight: bold;
+}
