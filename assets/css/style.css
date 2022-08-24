@@ -2773,7 +2773,7 @@ ul {
     position: relative;
     margin-bottom: 30px;
     transition: all 0.3s ease-in;
-    box-shadow: 0px 20px 50px rgba(9, 21, 77, 0.05);
+    box-shadow: 0px 20px 50px rgba(9, 21, 77, 0.3);
 }
 
 .single-intro-inner:hover {
@@ -3220,7 +3220,7 @@ ul {
 /************ single-testimonial-inner *************/
 
 .single-testimonial-inner {
-    background: #fff;
+    background: #0A0666;
     padding: 45px 50px;
     border-radius: 7px;
     overflow: hidden;
